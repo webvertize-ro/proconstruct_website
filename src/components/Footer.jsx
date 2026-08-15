@@ -126,11 +126,12 @@ function Footer() {
                   className="text-decoration-none"
                   aria-label="Pagina de facebook a afacerii"
                 >
-                  <StyledFontAwesomeIcon
+                  {/* <StyledFontAwesomeIcon
                     icon={
                       "fa" + c(contentMap, `global.footer_social_${n}.platform`)
                     }
-                  />
+                  /> */}
+                  test-n
                 </a>;
               })}
             </div>
