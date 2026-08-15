@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { useEffect, useRef, useState } from "react";
 import program from "../data/program.json";
 import c from "../../utils/content";
+import { useContent } from "../hooks/useContent";
 
 const StyledBottomNav = styled.div`
   display: none;
@@ -162,6 +163,7 @@ function BottomNav() {
   ];
   const currentDate = new Date();
   const currentDay = days[currentDate.getDay()];
+  const { contentMap } = useContent();
 
   function useClickOutside(ref, callback) {
     useEffect(() => {
@@ -198,10 +200,14 @@ function BottomNav() {
         <ProgramBox>
           <StyledH5>Program de lucru</StyledH5>
           <StyledUl>
-            {program.map((p) => (
-              <ProgramLine key={p.day} currenDay={currentDay === p.day}>
-                <DayName>{p.day}</DayName>
-                <DayHours>{p.schedule}</DayHours>
+            {[1, 2, 3, 4, 5, 6, 7].map((n) => (
+              <ProgramLine key={n} currenDay={currentDay + 1 === n}>
+                <DayName>
+                  {c(contentMap, `global.contact_hours_${n}_day`)}
+                </DayName>
+                <DayHours>
+                  {c(contentMap, `global.contact_hours_${n}_schedule`)}
+                </DayHours>
               </ProgramLine>
             ))}
           </StyledUl>
