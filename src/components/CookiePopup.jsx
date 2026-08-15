@@ -86,10 +86,7 @@ function CookiePopup() {
             <Button onClick={() => handlePopup()} className="ok-cookie-pop-up">
               {c(contentMap, "global.cookie-pop-up-button-1-text")}
             </Button>
-            <Button
-              to={c(contentMap, "global.cookie-pop-up-button-2-route")}
-              target="_blank"
-            >
+            <Button to={c(contentMap, "global.cookie-pop-up-button-2-route")}>
               {c(contentMap, "global.cookie-pop-up-button-2-text")}
             </Button>
           </ButtonsContainer>
