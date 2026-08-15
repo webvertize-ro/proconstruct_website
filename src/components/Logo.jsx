@@ -15,6 +15,7 @@ function Logo({ width }) {
     <StyledImg
       width={width}
       src={c(contentMap, "global.logo")}
+      b
       alt="Logo-ul afacerii [Nume Afacere]"
     />
   );

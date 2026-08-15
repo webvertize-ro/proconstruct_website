@@ -120,34 +120,19 @@ function Footer() {
               {c(contentMap, "global.footer_social_title")}
             </h5>
             <div className="mb-4 d-flex gap-2">
-              <a
-                href="#"
-                className="text-decoration-none"
-                aria-label="Pagina de facebook a afacerii"
-              >
-                <StyledFontAwesomeIcon icon={faFacebook} />
-              </a>
-              <a
-                className="text-decoration-none"
-                href="#"
-                aria-label="Pagina de twitter a afacerii"
-              >
-                <StyledFontAwesomeIcon icon={faTwitter} />
-              </a>
-              <a
-                className="text-decoration-none"
-                href="#"
-                aria-label="Pagina de instagram a afacerii"
-              >
-                <StyledFontAwesomeIcon icon={faInstagram} />
-              </a>
-              <a
-                href="#"
-                className="text-decoration-none"
-                aria-label="Pagina de Pinterest a afacerii"
-              >
-                <StyledFontAwesomeIcon icon={faPinterest} />
-              </a>
+              {[1, 2, 3, 4].map((n) => {
+                <a
+                  href={c(contentMap, `global.footer_social_${n}.url`)}
+                  className="text-decoration-none"
+                  aria-label="Pagina de facebook a afacerii"
+                >
+                  <StyledFontAwesomeIcon
+                    icon={
+                      "fa" + c(contentMap, `global.footer_social_${n}.platform`)
+                    }
+                  />
+                </a>;
+              })}
             </div>
             <p>
               {c(contentMap, "global.footer_paragraph")}
