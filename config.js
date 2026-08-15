@@ -1,2 +1,2 @@
-export const WEBSITE_ID = '1db4c0bf-0450-436f-820c-a6198727905e';
-export const PACKAGE = 'Standard';
+export const WEBSITE_ID = "a37fbb0f-3816-4b87-bc8a-289c84647240";
+export const PACKAGE = "Standard";
