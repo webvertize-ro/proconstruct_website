@@ -6,8 +6,11 @@ import styled from "styled-components";
 import {
   faFacebook,
   faInstagram,
+  faLinkedin,
   faPinterest,
+  faTiktok,
   faTwitter,
+  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { useContent } from "../hooks/useContent";
 import c from "../../utils/content";
@@ -67,6 +70,26 @@ const Copyright = styled.div`
 function Footer() {
   const { contentMap } = useContent();
 
+  const iconMap = {
+    facebook: faFacebook,
+    instagram: faInstagram,
+    tiktok: faTiktok,
+    youtube: faYoutube,
+    linkedin: faLinkedin,
+  };
+
+  const socialLinks = [1, 2, 3, 4]
+    .map((n) => {
+      const raw = c(contentMap, `footer_social_${n}`);
+      if (!raw) return null;
+      try {
+        return JSON.parse(raw);
+      } catch {
+        return null;
+      }
+    })
+    .filter(Boolean);
+
   return (
     <StyledFooter className="footer py-6">
       <div className="container">
@@ -120,13 +143,9 @@ function Footer() {
               {c(contentMap, "global.footer_social_title")}
             </h5>
             <div className="mb-4 d-flex gap-2">
-              {[1, 2, 3, 4].map((n) => (
-                <a
-                  href={c(contentMap, `global.footer_social_${n}.url`)}
-                  className="text-decoration-none"
-                  aria-label="Pagina de facebook a afacerii"
-                >
-                  test-n
+              {socialLinks.map((link) => (
+                <a key={link.platform} href={link.url} target="_blank">
+                  <StyledFontAwesomeIcon icon={iconMap[link.platform]} />
                 </a>
               ))}
             </div>
