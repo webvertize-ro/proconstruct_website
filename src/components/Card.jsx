@@ -52,7 +52,7 @@ const TextContent = styled.div`
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   font-size: 2.2rem;
-  color: rgba(16, 31, 28, 1);
+  color: rgba(26, 46, 42, 1);
 `;
 
 const StyledH4 = styled.h4`
