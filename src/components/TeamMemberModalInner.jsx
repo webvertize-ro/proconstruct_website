@@ -3,9 +3,9 @@ import {
   faFacebookSquare,
   faInstagramSquare,
   faLinkedin,
-} from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styled from 'styled-components';
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styled from "styled-components";
 
 const StyledTeamMemberModalInner = styled.div`
   padding: 2rem;
@@ -54,8 +54,15 @@ const Socials = styled.div`
   align-items: center; */
 `;
 
-function TeamMemberModalInner({ img, long_desc, name }) {
-  console.log('long_desc in TeamMemberModalInner: ', long_desc);
+function TeamMemberModalInner({
+  img,
+  long_desc,
+  name,
+  linkedin,
+  facebook,
+  instagram,
+}) {
+  console.log("long_desc in TeamMemberModalInner: ", long_desc);
   return (
     <StyledTeamMemberModalInner>
       <Layout>
@@ -76,7 +83,7 @@ function TeamMemberModalInner({ img, long_desc, name }) {
               {/* LinkedIn */}
               <div>
                 <StyledLink
-                  href="https://linkedin.com"
+                  href={linkedin}
                   target="_blank"
                   aria-label={`Pagina de LinkedIn a membrului ${name}`}
                 >
@@ -86,7 +93,7 @@ function TeamMemberModalInner({ img, long_desc, name }) {
               {/* Facebook */}
               <div>
                 <StyledLink
-                  href="https://facebook.com"
+                  href={facebook}
                   target="_blank"
                   aria-label={`Pagina de Facebook a membrului ${name}`}
                 >
@@ -96,7 +103,7 @@ function TeamMemberModalInner({ img, long_desc, name }) {
               {/* Instragram */}
               <div>
                 <StyledLink
-                  href="https://linkedin.com"
+                  href={instagram}
                   target="_blank"
                   aria-label={`Pagina de Instagram a membrului ${name}`}
                 >

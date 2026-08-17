@@ -151,7 +151,14 @@ function CardTeamMember({
         title={name}
         bgColor="rgba(26, 46, 42, 0.5)"
       >
-        <TeamMemberModalInner img={img} name={name} long_desc={long_desc} />
+        <TeamMemberModalInner
+          img={img}
+          name={name}
+          long_desc={long_desc}
+          linkedin={linkedin}
+          facebook={facebook}
+          instagram={instagram}
+        />
       </Modal.Window>
     </Modal>
   );
