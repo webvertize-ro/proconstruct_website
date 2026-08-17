@@ -52,6 +52,9 @@ function OurTeam() {
                 short_desc={member.description}
                 long_desc={member.long_description}
                 role={member.function}
+                linkedin={member.linkedin}
+                facebook={member.facebook}
+                instagram={member.instagram}
               />
             </div>
           ))}
