@@ -38,8 +38,6 @@ function OurTeam() {
     instagram: c(contentMap, `about.member_${n}_instagram`),
   }));
 
-  console.log("members: ", members);
-
   return (
     <StyledOurTeam>
       <div className="container">
