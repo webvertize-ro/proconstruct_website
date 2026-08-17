@@ -181,12 +181,12 @@ function OurMission() {
                 to={c(contentMap, "home.services_button_more_route")}
                 aria-label="navighează la pagina cu servicii"
               >
-                {c(contentMap, "home.services_button_more_text")}
+                {c(contentMap, "about.mission_button_offer_text")}
               </Button1>
               <Modal>
                 <Modal.Open opens="form-modal">
                   <Button2>
-                    {c(contentMap, "home.services_button_offer_text")}
+                    {c(contentMap, "about.mission_button_portfolio_text")}
                   </Button2>
                 </Modal.Open>
                 <Modal.Window name="form-modal" bgColor="rgba(36, 61, 56, 0.9)">
