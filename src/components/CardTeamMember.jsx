@@ -93,7 +93,16 @@ const StyledLink = styled.a`
   }
 `;
 
-function CardTeamMember({ img, name, short_desc, long_desc, role }) {
+function CardTeamMember({
+  img,
+  name,
+  short_desc,
+  long_desc,
+  role,
+  linkedin,
+  facebook,
+  instagram,
+}) {
   return (
     <Modal>
       <Modal.Open opens="form-modal">
@@ -109,21 +118,21 @@ function CardTeamMember({ img, name, short_desc, long_desc, role }) {
             </div>
             <SocialsContainer>
               <StyledLink
-                href="https://linkedin.com"
+                href={linkedin}
                 target="_blank"
                 onClick={(e) => e.stopPropagation()}
               >
                 <StyledFontAwesomeIcon icon={faLinkedin} />
               </StyledLink>
               <StyledLink
-                href="https://facebook.com"
+                href={facebook}
                 target="_blank"
                 onClick={(e) => e.stopPropagation()}
               >
                 <StyledFontAwesomeIcon icon={faFacebookSquare} />
               </StyledLink>
               <StyledLink
-                href="https://instagram.com"
+                href={instagram}
                 target="_blank"
                 onClick={(e) => e.stopPropagation()}
               >
