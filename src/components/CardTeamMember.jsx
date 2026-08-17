@@ -149,7 +149,7 @@ function CardTeamMember({
       <Modal.Window
         name="form-modal"
         title={name}
-        bgColor="rgba(26, 46, 42, 0.5)"
+        bgColor="rgba(26, 46, 42, 0.9)"
       >
         <TeamMemberModalInner
           img={img}
