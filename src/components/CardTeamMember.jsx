@@ -103,6 +103,10 @@ function CardTeamMember({
   facebook,
   instagram,
 }) {
+  console.log("linkedin: ", linkedin);
+  console.log("facebook: ", facebook);
+  console.log("instagram: ", instagram);
+
   return (
     <Modal>
       <Modal.Open opens="form-modal">
