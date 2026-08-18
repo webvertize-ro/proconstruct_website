@@ -59,6 +59,7 @@ function Accordion({ data, title, subtitle, bgImg }) {
             <AccordionItem
               question={item.question}
               answer={item.answer}
+              number={item.number}
               index={index + 1}
               curOpen={curOpen}
               onCurOpen={setCurOpen}

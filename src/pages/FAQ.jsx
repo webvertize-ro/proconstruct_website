@@ -10,6 +10,7 @@ function FAQ() {
   const { contentMap } = useContent();
 
   const accordionItems = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => ({
+    number: c(contentMap, `faq.faq_${n}_number`),
     question: c(contentMap, `faq.faq_${n}_question`),
     answer: c(contentMap, `faq.faq_${n}_answer`),
   }));
