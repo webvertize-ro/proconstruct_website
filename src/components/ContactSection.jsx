@@ -167,12 +167,12 @@ function ContactSection() {
         <StyledP>{c(contentMap, "contact.contact_description")}</StyledP>
         <Row className="row d-flex">
           <LeftSide className="col-lg-6 d-flex flex-column gap-3">
-            {contactItems.map((c) => (
+            {contactItems.map((c, i) => (
               <ContactDataItem
                 link={c.link}
                 title={c.title}
                 description={c.value}
-                icon={iconMap[c.icon]}
+                icon={c.icon[i]}
               />
             ))}
             <Modal>
