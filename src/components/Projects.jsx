@@ -92,6 +92,8 @@ function Projects() {
     })),
   }));
 
+  console.log("projects: ", projects);
+
   return (
     <StyledProjects>
       <Container className="container">
