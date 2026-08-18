@@ -96,8 +96,9 @@ function ReasonsToChooseUs() {
 
         <div className="row">
           <StyledUl>
-            {reasons.map((item) => (
+            {reasons.map((item, i) => (
               <ListItem
+                key={item.title + i}
                 icon={item.icon}
                 title={item.title}
                 subtitle={item.description}

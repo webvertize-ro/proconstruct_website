@@ -72,6 +72,7 @@ const ProjectsGrid = styled.div`
 
 const CardCell = styled.div`
   display: flex;
+  border: 2px solid lime;
 `;
 
 function Projects() {
@@ -101,7 +102,7 @@ function Projects() {
         <StyledP>{c(contentMap, "portfolio.projects_description")}</StyledP>
         <ProjectsGrid>
           {projects.map((project, i) => (
-            <CardCell key={project.card_title ?? i}>
+            <CardCell key={project.card_title + i}>
               <ProjectsCard
                 img={project.card_image}
                 projectTitle={project.card_title}
