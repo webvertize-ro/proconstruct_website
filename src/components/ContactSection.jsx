@@ -154,7 +154,7 @@ function ContactSection() {
   const { contentMap } = useContent();
 
   const contactItems = [1, 2, 3].map((n) => ({
-    icon: c(contentMap, `contact.contact_item_${n}_icon`),
+    icon: ["address", "phone", "email"],
     title: c(contentMap, `contact.contact_item_${n}_title`),
     value: c(contentMap, `contact.contact_item_${n}_value`),
     link: c(contentMap, `contact.contact_item_${n}_link`),

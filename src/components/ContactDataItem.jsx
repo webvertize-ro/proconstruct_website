@@ -1,3 +1,8 @@
+import {
+  faEnvelope,
+  faMapPin,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
@@ -39,12 +44,18 @@ const StyledLink = styled.a`
   font-size: 1.1rem;
 `;
 
+const iconMap = {
+  address: faMapPin,
+  phone: faPhone,
+  email: faEnvelope,
+};
+
 function ContactDataItem({ title, description, icon, link }) {
   return (
     <StyledContactDataItem>
       <UpperSide>
         <div>
-          <FontAwesomeIcon icon={icon} />
+          <FontAwesomeIcon icon={iconMap[icon]} />
         </div>
         <div>{title}</div>
       </UpperSide>
