@@ -72,7 +72,6 @@ const ProjectsGrid = styled.div`
 
 const CardCell = styled.div`
   display: flex;
-  border: 2px solid lime;
 `;
 
 function Projects() {
@@ -92,8 +91,6 @@ function Projects() {
       src: c(contentMap, `portfolio.project_${n}_modal_image_${i}`),
     })),
   }));
-
-  console.log("projects: ", projects);
 
   return (
     <StyledProjects>
