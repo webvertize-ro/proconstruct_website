@@ -34,7 +34,7 @@ function Cookies() {
       </Helmet>
       <StyledCookies>
         <Hero
-          heroBg={c(contentMap, "products.header_bg_image")}
+          heroBg={c(contentMap, "cookies.header_bg_image")}
           heroTitle={c(contentMap, "cookies.header_title")}
           heroDesc={c(contentMap, "cookies.header_description")}
           btnTxt={c(contentMap, "cookies.header_button_text")}
