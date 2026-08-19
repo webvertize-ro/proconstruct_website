@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import logoImg from "../assets/images/basic-business-logo.svg";
 import c from "../../utils/content";
 import { useContent } from "../hooks/useContent";
 
